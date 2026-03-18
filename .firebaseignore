@@ -1,0 +1,7 @@
+firebase.json
+.firebaserc
+*.md
+*.ps1
+.claude/
+Index_checkpoint_*.html
+ChuperAmigo.html
