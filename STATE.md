@@ -100,6 +100,7 @@ All data is in TIERS[i].cp / .tint / .url / .e
 - prewarmEmojiCache(): iterates TIERS.length
 - Canvas fallback on CDN fail: draws t.e (always correct emoji)
 - To change a tier sprite: edit ONLY the TIERS entry. One place, no desync possible.
+- drawCreature() uses t.cp / t.tint / t.url / t.e for both player and NPC paths (fixed 2026-03-18b).
 
 ### HUD
 - Left: SCORE + TIME
@@ -164,3 +165,4 @@ Initials: 3 chars, auto-uppercase, Enter submits. restartGame() resets form stat
 - Index_checkpoint_2026-03-15d.html -- Polish: death screen fix, smoother movement, Firebase timeout
 - Index_checkpoint_2026-03-15e.html -- Pause screen fix + Copepod sprite + spawn balance
 - Index_checkpoint_2026-03-18.html  -- TIERS consolidation (SPRITE_* arrays merged in); Copepod fixed for good
+- (2026-03-18b fix) -- drawCreature NPC crash: stale SPRITE_* refs replaced with TIERS fields; deployed
